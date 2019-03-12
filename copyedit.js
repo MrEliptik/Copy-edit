@@ -1,5 +1,3 @@
-var isMouseDown = false;
-var selectionHasChanged = false;
 var bubble = null;
 var bubble_img = null;
 var copyInput = null;
@@ -71,7 +69,7 @@ function addFloatingBubble(){
     document.body.appendChild (bubble);
     bubble_img = document.getElementById("bubble");
 
-    bubble_img.addEventListener('click', (e) => {
+    bubble_img.addEventListener('click', () => {
         removeFloatingBubble();
         addInput(selection);
     });
